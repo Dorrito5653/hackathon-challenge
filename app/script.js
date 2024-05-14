@@ -1,21 +1,20 @@
-// In your main.js file
-const pantryItems = [
-    { name: 'Spices', image: 'spices.jpg' },
-    { name: 'Canned Goods', image: 'canned-goods.jpg' },
-    // Add more items
-];
+function addItem() {
+    var itemInput = document.getElementById("itemInput");
+    var item = itemInput.value.trim();
 
-function displayPantryItems() {
-    const pantrySection = document.getElementById('pantry-items');
-    pantryItems.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.classList.add('pantry-item');
-        itemElement.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
-            <p>${item.name}</p>
-        `;
-        pantrySection.appendChild(itemElement);
-    });
+    if (item === "") {
+        alert("Please enter an item.");
+        return;
+    }
+
+    var itemList = document.getElementById("itemList");
+    var listItem = document.createElement("li");
+    listItem.textContent = item;
+    itemList.appendChild(listItem);
+
+    itemInput.value = "";
 }
 
-displayPantryItems();
+window.onload = function() {
+    // You can add initial items here if you want
+};

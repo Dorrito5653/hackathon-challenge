@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Pantry App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Pantry</h1>
-    </header>
-    <section id="pantry-items">
-        <!-- Display pantry items here -->
-    </section>
-    <footer>
-        <!-- Add icons for different sections -->
-    </footer>
+    <div class="container">
+        <h1>Pantry App</h1>
+        <div class="pantry">
+            <h2>My Pantry</h2>
+            <input type="text" id="itemInput" placeholder="Enter item">
+            <button onclick="addItem()">Add Item</button>
+            <ul id="itemList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
