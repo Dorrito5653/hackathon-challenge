@@ -5,8 +5,12 @@ body {
     background-color: #ffffff; /* Light pink */
 }
 
+header {
+    background-color: lightgray;
+}
+
 .container {
-    max-width: 600px;
+    max-width: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
