@@ -11,8 +11,13 @@ body {
     color: #ffffff; /* Dark mode text color */
 }
 
+header {
+    background-color: lightgray;
+}
+
 .container {
-    max-width: 600px;
+    background-color: black;
+    max-width: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -30,7 +35,7 @@ h1, h2 {
 }
 
 .pantry {
-    background-color: #f9f9f9;
+    background-color: black;
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
