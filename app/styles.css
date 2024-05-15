@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Light mode background color */
-    color: #333; /* Light mode text color */
+    color: white; /* Light mode text color */
 }
 
 header {
@@ -22,7 +22,7 @@ header {
     height: 7.5em;
     background-color: aqua;
     border: 5px solid black;
-    border-bottom: 5px dotted black;
+    border-bottom: 5px dotted rgb(0, 0, 0);
     display: flex;
 }
 
@@ -43,7 +43,7 @@ header {
     height: 768px;
     margin: 20px auto;
     padding: 20px;
-    background-color: darkslategrey; /* Light mode container background color */
+    background-color: white; /* Light mode container background color */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
