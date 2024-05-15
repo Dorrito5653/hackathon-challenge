@@ -5,9 +5,13 @@ body {
     background-color: #ffffff; /* Light pink */
 }
 
+header {
+    background-color: lightgray;
+}
+
 .container {
     background-color: black;
-    max-width: 600px;
+    max-width: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -79,39 +83,4 @@ li {
 
 .remove-btn:hover {
     background-color: #d32f2f; /* Darker red */
-}
-
-/* Add this CSS to your existing styles.css file */
-
-.chatbot {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.chat {
-    max-height: 200px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.user-message, .bot-message {
-    margin-bottom: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.user-message {
-    background-color: #d3f7ff; /* Light blue */
-    text-align: right;
-}
-
-.bot-message {
-    background-color: #e6e6e6; /* Light grey */
-    text-align: left;
 }
