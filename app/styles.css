@@ -6,13 +6,43 @@ body {
     color: #333; /* Light mode text color */
 }
 
+header {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    vertical-align: center;
+    align-items: center;
+}
+
+.top {
+    margin: 0;
+    padding: 20px;
+}
+
+.row {
+    height: 7.5em;
+    background-color: aqua;
+    border: 5px solid black;
+    border-bottom: 5px dotted black;
+    display: flexbox;
+}
+
+.row .item-img img {
+    max-height: 75%;
+
+    max-width: 7em;
+    border: 3px solid gray
+
+}
+
 .dark-mode body {
     background-color: #1c1c1e; /* Dark mode background color */
     color: #ffffff; /* Dark mode text color */
 }
 
 .container {
-    max-width: 768px;
+    max-width: 500px;
+    max-height: 768px;
+    height: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #f2f2f7; /* Light mode container background color */
@@ -24,13 +54,17 @@ body {
     background-color: #1c1c1e; /* Dark mode container background color */
 }
 
-h1 {
+.dark-mode h2, .dark-mode h1 {
+    color: #0a84ff; /* Dark mode heading color */
+}
+
+h2, h1 {
     text-align: center;
     color: #007aff; /* Light mode heading color */
 }
 
-.dark-mode h1 {
-    color: #0a84ff; /* Dark mode heading color */
+.dark-mode ul {
+    color: #c6c6c6;
 }
 
 .pantry {
@@ -42,7 +76,7 @@ h1 {
 }
 
 .dark-mode .pantry {
-    background-color: #2c2c2e; /* Dark mode pantry background color */
+    background-color: black; /* Dark mode pantry background color */
 }
 
 input[type="text"] {
