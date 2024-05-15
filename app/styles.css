@@ -6,11 +6,36 @@ body {
 }
 
 header {
-    background-color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    vertical-align: center;
+    align-items: center;
+}
+
+.top {
+    margin: 0;
+    padding: 20px;
+}
+
+.row {
+    height: 7.5em;
+    background-color: aqua;
+    border: 5px solid black;
+    border-bottom: 5px dotted black;
+    display: flexbox;
+}
+
+.row .item-img img {
+    max-height: 75%;
+
+    max-width: 7em;
+    border: 3px solid gray
 }
 
 .container {
-    max-width: 768px;
+    max-width: 500px;
+    max-height: 768px;
+    height: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
