@@ -1,3 +1,4 @@
+
 // Function to add an item to the pantry
 function addItem() {
   var itemInput = document.getElementById("itemInput");
@@ -70,5 +71,5 @@ function getTotalQuantity() {
 
 // Function to navigate to the selected URL
 function navigate(url) {
-  window.location.href = URL; //This is where you can link it to anythinghttps://www.youtube.com/watch?v=dQw4w9WgXcQ
+  window.location.href = url;
 }
