@@ -7,33 +7,34 @@ body {
 }
 
 .dark-mode body {
-    background-color: #333; /* Dark mode background color */
+    background-color: #1c1c1e; /* Dark mode background color */
     color: #ffffff; /* Dark mode text color */
-}
-
-header {
-    background-color: lightgray;
 }
 
 .container {
     max-width: 768px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f2f2f7; /* Light mode container background color */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
+.dark-mode .container {
+    background-color: #1c1c1e; /* Dark mode container background color */
 }
 
-.dark-mode h1, .dark-mode h2 {
-    color: #ffffff; /* Dark mode heading color */
+h1 {
+    text-align: center;
+    color: #007aff; /* Light mode heading color */
+}
+
+.dark-mode h1 {
+    color: #0a84ff; /* Dark mode heading color */
 }
 
 .pantry {
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -41,22 +42,29 @@ h1, h2 {
 }
 
 .dark-mode .pantry {
-    background-color: #333; /* Dark mode pantry background color */
+    background-color: #2c2c2e; /* Dark mode pantry background color */
 }
 
 input[type="text"] {
     width: calc(100% - 15px);
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
+    border: 1px solid #c6c6c6; /* Light mode input border color */
     border-radius: 5px;
     text-align: center;
+    background-color: #f2f2f7; /* Light mode input background color */
+}
+
+.dark-mode input[type="text"] {
+    border-color: #38383a; /* Dark mode input border color */
+    background-color: #2c2c2e; /* Dark mode input background color */
+    color: #ffffff; /* Dark mode input text color */
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #007aff; /* Light mode button background color */
+    color: #ffffff; /* Light mode button text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -64,16 +72,15 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Light mode button hover background color */
 }
 
 .dark-mode button {
-    background-color: #333; /* Dark mode button background color */
-    color: #ffffff; /* Dark mode button text color */
+    background-color: #0a84ff; /* Dark mode button background color */
 }
 
 .dark-mode button:hover {
-    background-color: #666; /* Dark mode button hover background color */
+    background-color: #007aff; /* Dark mode button hover background color */
 }
 
 .mode-buttons {
@@ -94,7 +101,7 @@ ul {
 li {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #e0e0e0;
+    background-color: #e5e5ea; /* Light mode list item background color */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -103,12 +110,12 @@ li {
 }
 
 .dark-mode li {
-    background-color: #444; /* Dark mode list item background color */
+    background-color: #3a3a3c; /* Dark mode list item background color */
 }
 
 .remove-btn {
-    background-color: #f44336; /* Red */
-    color: white;
+    background-color: #ff3b30; /* Red */
+    color: #ffffff; /* Remove button text color */
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -117,5 +124,5 @@ li {
 }
 
 .remove-btn:hover {
-    background-color: #d32f2f; /* Darker red */
+    background-color: #ff453a; /* Darker red */
 }
