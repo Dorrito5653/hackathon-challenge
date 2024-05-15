@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 768px;
     margin: 20px auto;
     padding: 20px;
     background-color: #f2f2f7; /* Light mode container background color */
