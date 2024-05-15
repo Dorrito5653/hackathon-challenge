@@ -109,11 +109,11 @@ button {
 }
 
 .add-item {
-    position: fixed;
+    position: absolute;
     text-align: center;
     margin: auto;
     left: 50%;
-    transform: translate(-50%, -33%);
+    transform: translate(-50%);
 }
 
 button:hover {
