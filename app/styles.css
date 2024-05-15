@@ -160,3 +160,23 @@ li {
 .remove-btn:hover {
     background-color: #ff453a; /* Darker red */
 }
+
+
+.pantry{
+    background-color: black;
+    color: white;
+
+}
+
+nav {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+.navitems{
+
+}
