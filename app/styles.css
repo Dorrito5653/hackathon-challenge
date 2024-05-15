@@ -161,5 +161,34 @@ li {
     background-color: #ff453a; /* Darker red */
 }
 
+#open-nav-bar{
+    background-color: white;
+    cursor: pointer;
+}
 
+.dropdown a{
+    display:block;
+    color: black;
+    text-decoration: none; 
+    padding: 10px 15px;
+}
+
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: rgb(221, 219, 219);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px;
+}
+#open-nav-bar:hover ~ .content{
+    display: block;
+}
+
+#open-nav-bar:hover{
+    background-color: rgb(247, 237, 237);
+}
+
+.dropdown a:hover{
+    background-color: #b6b8b9;
+}
 
