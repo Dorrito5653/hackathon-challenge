@@ -54,13 +54,17 @@ header {
     background-color: #1c1c1e; /* Dark mode container background color */
 }
 
-h1 {
+.dark-mode h2, .dark-mode h1 {
+    color: #0a84ff; /* Dark mode heading color */
+}
+
+h2, h1 {
     text-align: center;
     color: #007aff; /* Light mode heading color */
 }
 
-.dark-mode h1 {
-    color: #0a84ff; /* Dark mode heading color */
+.dark-mode ul {
+    color: #c6c6c6;
 }
 
 .pantry {
