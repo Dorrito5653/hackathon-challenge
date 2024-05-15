@@ -10,13 +10,19 @@
 </head>
 
 <body>
-    <div class="sidenav">
-        <a href="#">Home</a>
-    </div>
-    
-    
+    <nav>
+        <div class="pantry">PANTRY WEBSITE</div>
+        <div class="navitems">
+            <select onchange="navigate(this.value)">
+                <option value="/">Home</option>
+                <!-- Add more options for other pages if needed -->
+            </select>
+        </div>
+    </nav>
+
     <div class="container">
         <h1>Pantry App</h1>
+
         <div class="pantry">
             <h2>My Pantry</h2>
             <input type="text" id="itemInput" placeholder="Enter item">
@@ -29,6 +35,7 @@
             <button onclick="toggleMode('dark')"><img src="Assets/darkmodeicon.png" width="24px" height="24px" alt=""></button>
         </div>
     </div>
+
 
     <script src="./script.js"></script>
 
