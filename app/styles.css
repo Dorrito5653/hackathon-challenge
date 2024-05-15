@@ -61,8 +61,12 @@ h2, h1 {
     color: #007aff; /* Light mode heading color */
 }
 
-.dark-mode ul {
+.dark-mode ul, .dark-mode .dropdown a{
     color: #c6c6c6;
+}
+
+.dark-mode #open-nav-bar {
+    background-color: #333;
 }
 
 .pantry {
@@ -114,6 +118,11 @@ button {
     margin: auto;
     left: 50%;
     transform: translate(-50%);
+}
+
+.dark-mode .dropdown .content {
+    color: #c6c6c6;
+    background-color: #333;
 }
 
 button:hover {
@@ -191,6 +200,7 @@ li {
     min-width: 100px;
     box-shadow: 2px 2px 5px;
 }
+
 #open-nav-bar:hover ~ .content{
     display: block;
 }
