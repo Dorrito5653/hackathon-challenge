@@ -75,7 +75,11 @@ h2, h1 {
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding-bottom: 45px;
+    padding-bottom: 10px;
+}
+
+#quantityInput {
+    margin-bottom: 60px;
 }
 
 .dark-mode .pantry {
@@ -117,7 +121,7 @@ button {
     text-align: center;
     margin: auto;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -140%);
 }
 
 .dark-mode .dropdown .content {
