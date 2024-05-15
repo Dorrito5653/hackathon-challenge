@@ -23,7 +23,7 @@ header {
     background-color: aqua;
     border: 5px solid black;
     border-bottom: 5px dotted black;
-    display: flexbox;
+    display: flex;
 }
 
 .row .item-img img {
@@ -34,7 +34,7 @@ header {
 
 }
 
-.dark-mode body {
+.dark-mode {
     background-color: #1c1c1e; /* Dark mode background color */
     color: #ffffff; /* Dark mode text color */
 }
