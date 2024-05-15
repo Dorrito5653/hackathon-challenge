@@ -158,14 +158,3 @@ li {
     background-color: #ff453a; /* Darker red */
 }
 
-.nav {
-    height: 80px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navitems {
-    color: white;
-}
