@@ -71,6 +71,7 @@ h2, h1 {
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 45px;
 }
 
 .dark-mode .pantry {
@@ -80,6 +81,8 @@ h2, h1 {
 input[type="text"],
 input[type="number"] {
     width: calc(50% - 10px);
+    display: block;
+    margin: auto;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #c6c6c6; /* Light mode input border color */
@@ -103,6 +106,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.add-item {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 button:hover {
