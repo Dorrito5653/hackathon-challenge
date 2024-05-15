@@ -23,7 +23,7 @@ header {
     background-color: aqua;
     border: 5px solid black;
     border-bottom: 5px dotted black;
-    display: flexbox;
+    display: flex;
 }
 
 .row .item-img img {
@@ -159,4 +159,24 @@ li {
 
 .remove-btn:hover {
     background-color: #ff453a; /* Darker red */
+}
+
+
+.pantry{
+    background-color: black;
+    color: white;
+
+}
+
+nav {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+.navitems{
+    color: white;
 }
