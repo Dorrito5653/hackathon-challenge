@@ -177,6 +177,8 @@ nav {
     align-items: center;
 }
 
-.navitems{
+#home{
     color: white;
+    text-decoration: none;
+    padding: 0 1.5rem;
 }
