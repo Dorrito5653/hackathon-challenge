@@ -17,7 +17,6 @@ header {
     margin: 0;
     padding: 20px;
 }
-
 .row {
     height: 7.5em;
     background-color: aqua;
@@ -25,13 +24,11 @@ header {
     border-bottom: 5px dotted black;
     display: flex;
 }
-
 .row .item-img img {
     max-height: 75%;
     max-width: 7em;
     border: 3px solid gray;
 }
-
 .dark-mode {
     background-color: #1c1c1e; /* Dark mode background color */
     color: #ffffff; /* Dark mode text color */
@@ -161,16 +158,32 @@ li {
     background-color: #ff453a; /* Darker red */
 }
 
-.nav {
-    height: 80px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidenav{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(43, 42, 42) ;
+    overflow-x:hidden ;
+    padding-top:20px ;
 }
 
-#home{
-    color: white;
+.sidenav a{
+    padding: 6px, 8px, 6px 16px;
     text-decoration: none;
-    padding: 0 1.5rem;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  
 }
+
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
