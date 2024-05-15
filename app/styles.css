@@ -17,7 +17,6 @@ header {
     margin: 0;
     padding: 20px;
 }
-
 .row {
     height: 7.5em;
     background-color: aqua;
@@ -25,13 +24,11 @@ header {
     border-bottom: 5px dotted black;
     display: flex;
 }
-
 .row .item-img img {
     max-height: 75%;
     max-width: 7em;
     border: 3px solid gray;
 }
-
 .dark-mode {
     background-color: #1c1c1e; /* Dark mode background color */
     color: #ffffff; /* Dark mode text color */
