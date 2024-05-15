@@ -23,7 +23,7 @@ header {
     background-color: aqua;
     border: 5px solid black;
     border-bottom: 5px dotted black;
-    display: flex;
+    display: flexbox;
 }
 
 .row .item-img img {
