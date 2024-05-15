@@ -169,7 +169,16 @@ li {
     align-items: center;
 }
 
-#home{
+.pantry{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+nav a{
     text-decoration: none;
+    color: black;
     padding: 0 1.5rem;
 }
