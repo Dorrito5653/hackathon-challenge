@@ -67,3 +67,8 @@ function getTotalQuantity() {
   });
   return total;
 }
+
+// Function to navigate to the selected URL
+function navigate(url) {
+  window.location.href = url;
+}

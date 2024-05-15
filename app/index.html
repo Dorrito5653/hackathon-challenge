@@ -11,17 +11,12 @@
 
 <body>
     <div class="sidenav">
-        <a href="#">pantry</a>
+        <a href="#">Home</a>
     </div>
     
     
     <div class="container">
-        <header>
-            <button class="side-button" id="open-nav-bar" onclick="">
-                <img src="Assets/Hamburger_icon.svg.png" width="24px" height="24px" alt="Menu Button">
-            </button>
-            <h1 class="top">Pantry App</h1>
-        </header>
+        <h1>Pantry App</h1>
         <div class="pantry">
             <h2>My Pantry</h2>
             <input type="text" id="itemInput" placeholder="Enter item">
@@ -36,6 +31,12 @@
     </div>
 
     <script src="./script.js"></script>
+
+    <script>
+        function navigate(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 
 </html>
