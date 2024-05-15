@@ -70,5 +70,5 @@ function getTotalQuantity() {
 
 // Function to navigate to the selected URL
 function navigate(url) {
-  window.location.href = url;
+  window.location.href = URL; //This is where you can link it to anythinghttps://www.youtube.com/watch?v=dQw4w9WgXcQ
 }
