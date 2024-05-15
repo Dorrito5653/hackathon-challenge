@@ -24,6 +24,11 @@ function addItem() {
     itemInput.value = "";
 }
 
-window.onload = function() {
-    // You can add initial items here if you want
-};
+function toggleMode(mode) {
+    const body = document.body;
+    if (mode === 'light') {
+        body.classList.remove('dark-mode');
+    } else if (mode === 'dark') {
+        body.classList.add('dark-mode');
+    }
+}
