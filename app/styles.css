@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Light mode background color */
-    color: white; /* Light mode text color */
+    color: black; /* Light mode text color */
 }
 
 header {
