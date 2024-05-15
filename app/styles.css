@@ -186,7 +186,7 @@ li {
 }
 
 #open-nav-bar{
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
