@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,20 @@
     <script src="script.js"></script>
     <title>Pantry Shelf</title>
 </head>
+
 <body>
     <div class="container">
-        <header>
-            <button class="side-button" id="open-nav-bar" onclick="">
-                <img src="Assets/Hamburger_icon.svg.png" width="24px" height="24px" alt="Menu Button">
-            </button>
-            <h1 class="top">Pantry App</h1>
+
+            <div class="dropdown">
+                <button class="side-button" id="open-nav-bar" onclick="">
+                    <img src="Assets/Hamburger_icon.svg.png" width="24px" height="24px" alt="Menu Button">
+                </button>
+                <div class="content">
+                    <a href="index.html">Home</a>
+                    <a href="shelf.html">Pantry</a>
+                </div>
+            </div>
+            <h1>Pantry App</h1>
         </header>
 
         <div class="pantry">
@@ -31,10 +39,13 @@
             <div class="row" id="row-4"></div>
         </div>
         <div class="mode-buttons">
-            <button onclick="toggleMode('light')"><img src="Assets/lightmodeicon.png" width="24px" height="24px" alt=""></button>
-            <button onclick="toggleMode('dark')"><img src="Assets/darkmodeicon.png" width="24px" height="24px" alt=""></button>
+            <button onclick="toggleMode('light')"><img src="Assets/lightmodeicon.png" width="24px" height="24px"
+                    alt=""></button>
+            <button onclick="toggleMode('dark')"><img src="Assets/darkmodeicon.png" width="24px" height="24px"
+                    alt=""></button>
         </div>
     </div>
-    
+
 </body>
+
 </html>

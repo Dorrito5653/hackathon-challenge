@@ -1,3 +1,4 @@
+
 // Function to add an item to the pantry
 function addItem() {
   var itemInput = document.getElementById("itemInput");
@@ -66,4 +67,9 @@ function getTotalQuantity() {
       total += quantity;
   });
   return total;
+}
+
+// Function to navigate to the selected URL
+function navigate(url) {
+  window.location.href = url;
 }
