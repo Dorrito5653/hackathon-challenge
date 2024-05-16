@@ -12,6 +12,10 @@
 <body>
     <div class="container">
             <header>
+                <div class="search" >
+                    <input type="text" id="searchbar" placeholder="Search"> 
+                </div>
+                
                 <div class="dropdown">
                 <button class="side-button" id="open-nav-bar" onclick="">
                     <img src="Assets/Hamburger_icon.svg.png" width="24px" height="24px" alt="Menu Button">
@@ -30,9 +34,6 @@
             <input type="text" id="itemInput" placeholder="Enter item">
             <input type="number" id="quantityInput" min="1" value="1" placeholder="Quantity"> <!-- Quantity input field -->
             <button onclick="addItem()" class="add-item">Add Item</button>
-            <div class="search" >
-                <input type="text" id="searchbar" placeholder="Search"> 
-            </div>
             <ul id="itemList"></ul>
         </div>
         <div class="mode-buttons">
