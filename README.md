@@ -11,4 +11,5 @@ To run this, please make sure to add mongodb key and openai api key in a .env fi
 It uses various node modules including:
 -Express JS
 -Mongoose
--Openai module
+-Openai
+-Cors
