@@ -260,4 +260,15 @@ li {
     box-shadow: 2px 2px 3px rgb(0, 0, 0);
     padding-bottom: 10px;
     height: 150px;
+
 }
+
+.chatbot_chat{
+    margin: auto;
+    background-color: darkgrey;
+    height: 50px;
+    width: 375px;
+    opacity: 0.9;
+    display: flex;
+}
+
