@@ -246,16 +246,18 @@ li {
 
 .chat_add{
     margin-top: 50px;
-    position: absolute;
+    margin-left: 230px;
     text-align: center;
     left: 50%;
     transform: translate(-50%, -140%);
+    height: auto;
+    width: 250px;
 }
 
 .pantry_chat{
     max-width: 500px;
     max-height: 768px;
-    height: 200px;
+    height: auto;
     margin: 20px auto;
     padding: 20px;
     background-color: white; /* Light mode container background color */
@@ -270,11 +272,18 @@ li {
 
 .chatbot_chat{
     margin: auto;
-    background-color: darkgrey;
-    height: 50px;
+    background-color: rgba(65, 65, 65, 0.1);
+    height: auto;
     width: 375px;
-    opacity: 0.9;
     display: none;
+    color: #1c1c1e;
+    text-align: center;
+    border: solid 2px;
+}
+
+#chatbot_text{
+    color: black;
+    font-family:"Ubuntu Sans Mono"; 
 }
 
 
