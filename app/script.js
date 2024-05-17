@@ -126,3 +126,7 @@ async function getRecipeRecommendations() {
 function navigate(url) {
     window.location.href = url;
 }
+
+window.onload(() => {
+    
+})
