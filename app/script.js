@@ -1,3 +1,5 @@
+var items = []
+
 function addItem() {
     var itemInput = document.getElementById("itemInput");
     var quantityInput = document.getElementById("quantityInput"); // Get quantity input field
@@ -9,6 +11,8 @@ function addItem() {
         return;
     }
 
+    items.push(item)
+    console.log(items)
     var itemList = document.getElementById("itemList");
     var listItem = document.createElement("li");
     listItem.textContent = item;
@@ -30,6 +34,7 @@ function addItem() {
     removeButton.classList.add("remove-btn");
     removeButton.onclick = function () {
         itemList.removeChild(listItem);
+        delete items[item]
     };
 
     listItem.appendChild(removeButton);
@@ -76,17 +81,19 @@ function getTotalQuantity() {
 
 async function getRecipeRecommendations() {
   //Generates recipes and instructions based on items in pantry
-  let responses = await fetch('http://localhost:3000/recommendations', {
+  var responses = await fetch('http://localhost:3000/recommendations', {
     body: {
-      items: ""
+      items: []
     }
   })
-  response = responses.json()[0].message.content
-  
-}
 
-async function generateRecipeInstructions() {
-  
+  if (responses.ok) {
+    var json = await responses.json();
+    var first_response = json[0].message.content
+    document.getElementById('chatbot_text').innerText = first_response
+  } else {
+    alert("HTTP-Error: " + responses.status)
+  }
 }
 
 // Function to navigate to the selected URL
