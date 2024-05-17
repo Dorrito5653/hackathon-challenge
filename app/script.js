@@ -62,6 +62,7 @@ function addItem() {
     items_list.forEach(v => {
       items.push(v.innerText.split("\n")[0])
     })
+    localStorage.setItem('item_list', items)
     // Add event listener for expiry date change
     expiryInput.addEventListener("change", function () {
         // Logic to store expiry date (implementation not shown here)
@@ -103,7 +104,7 @@ async function getRecipeRecommendations() {
   var responses = fetch(`http://localhost:3000/recommendations`, {
     method: "POST",
     body: {
-        items: items
+        items: localStorage.getItem('item_list')
     }
   }).then(() => {
     if (responses.ok) {
