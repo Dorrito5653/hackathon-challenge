@@ -1,3 +1,4 @@
+var items_list = []
 var items = []
 
 function addItem() {
@@ -11,8 +12,6 @@ function addItem() {
         return;
     }
 
-    items.push(item)
-    console.log(items)
     let food_elms = document.querySelectorAll('#itemList li')
     let ret = false;
     food_elms.forEach(v => {
@@ -49,7 +48,6 @@ function addItem() {
     removeButton.classList.add("remove-btn");
     removeButton.onclick = function () {
         itemList.removeChild(listItem);
-        delete items[item]
     };
 
     listItem.appendChild(removeButton);
@@ -58,6 +56,12 @@ function addItem() {
     itemInput.value = "";
     quantityInput.value = "1"; // Reset quantity input field after adding an item
 
+    items_list = document.querySelectorAll('#itemList li')
+    items = []
+
+    items_list.forEach(v => {
+      items.push(v.innerText.split("\n")[0])
+    })
     // Add event listener for expiry date change
     expiryInput.addEventListener("change", function () {
         // Logic to store expiry date (implementation not shown here)
@@ -96,19 +100,20 @@ function getTotalQuantity() {
 
 async function getRecipeRecommendations() {
   //Generates recipes and instructions based on items in pantry
-  var responses = await fetch('http://localhost:3000/recommendations', {
+  var responses = fetch(`http://localhost:3000/recommendations`, {
+    method: "POST",
     body: {
-      items: []
+        items: items
+    }
+  }).then(() => {
+    if (responses.ok) {
+      var json = responses.json();
+      var first_response = json[0].message.content
+      document.getElementById('chatbot_text').innerText = first_response
+    } else {
+      alert("HTTP-Error: " + responses.status)
     }
   })
-
-  if (responses.ok) {
-    var json = await responses.json();
-    var first_response = json[0].message.content
-    document.getElementById('chatbot_text').innerText = first_response
-  } else {
-    alert("HTTP-Error: " + responses.status)
-  }
 }
 
 // Function to navigate to the selected URL

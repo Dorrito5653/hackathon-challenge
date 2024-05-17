@@ -19,7 +19,7 @@ async function generateRecommendations(prompt) {
 
 const router = express.Router()
 
-router.get('/recommendations', async function (req, res) {
+router.post('/recommendations', async function (req, res) {
     try {
       const recommendations = await generateRecommendations(`Give me one recipe I can make using any of the following items ${req.body.items} along with step by step instructions.`)
       res.status(200).send(recommendations)  
@@ -30,14 +30,14 @@ router.get('/recommendations', async function (req, res) {
     
 })
 
-router.get('/instructions', async function (req, res) {
-  try {
-    const instructions = await generateRecommendations(`Give me instructions on how to make ${req.body.recipe} with ${req.body.items}`)
-    res.status(200).send(instructions[0].message.content)
-  } catch (error) {
-    console.log(error)
-    res.status(500).send('Sorry, there was an error while generating recipe instructions')
-  }
-})
+// router.get('/instructions', async function (req, res) {
+//   try {
+//     const instructions = await generateRecommendations(`Give me instructions on how to make ${req.body.recipe} with ${req.body.items}`)
+//     res.status(200).send(instructions[0].message.content)
+//   } catch (error) {
+//     console.log(error)
+//     res.status(500).send('Sorry, there was an error while generating recipe instructions')
+//   }
+// })
 
 module.exports = router
