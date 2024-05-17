@@ -1,3 +1,5 @@
+var items = []
+
 function addItem() {
     var itemInput = document.getElementById("itemInput");
     var quantityInput = document.getElementById("quantityInput"); // Get quantity input field
@@ -9,13 +11,30 @@ function addItem() {
         return;
     }
 
+    items.push(item)
+    console.log(items)
+    let food_elms = document.querySelectorAll('#itemList li')
+    let ret = false;
+    food_elms.forEach(v => {
+        /** @type {string} */
+        let innert = v.innerText
+        if (innert.split('\n')[0] === item) {
+            ret = true;
+            let q = v.querySelector('.quantity .quantity-val')
+            let qt = Number(q.textContent) + Number(quantity)
+            q.textContent = qt
+            itemInput.value = ''
+        }
+    })
+    if (ret) return;
+
     var itemList = document.getElementById("itemList");
     var listItem = document.createElement("li");
     listItem.textContent = item;
 
     // Create a span element for quantity and set its text content
     var quantitySpan = document.createElement("span");
-    quantitySpan.textContent = "Quantity: " + quantity;
+    quantitySpan.innerHTML = 'Quantity: <span class="quantity-val">' + quantity + "</span>";
     quantitySpan.classList.add("quantity");
     listItem.appendChild(quantitySpan);
 
@@ -30,6 +49,7 @@ function addItem() {
     removeButton.classList.add("remove-btn");
     removeButton.onclick = function () {
         itemList.removeChild(listItem);
+        delete items[item]
     };
 
     listItem.appendChild(removeButton);
@@ -72,6 +92,23 @@ function getTotalQuantity() {
         total += quantity;
     });
     return total;
+}
+
+async function getRecipeRecommendations() {
+  //Generates recipes and instructions based on items in pantry
+  var responses = await fetch('http://localhost:3000/recommendations', {
+    body: {
+      items: []
+    }
+  })
+
+  if (responses.ok) {
+    var json = await responses.json();
+    var first_response = json[0].message.content
+    document.getElementById('chatbot_text').innerText = first_response
+  } else {
+    alert("HTTP-Error: " + responses.status)
+  }
 }
 
 // Function to navigate to the selected URL
