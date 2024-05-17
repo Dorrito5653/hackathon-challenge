@@ -13,13 +13,28 @@ function addItem() {
 
     items.push(item)
     console.log(items)
+    let food_elms = document.querySelectorAll('#itemList li')
+    let ret = false;
+    food_elms.forEach(v => {
+        /** @type {string} */
+        let innert = v.innerText
+        if (innert.split('\n')[0] === item) {
+            ret = true;
+            let q = v.querySelector('.quantity .quantity-val')
+            let qt = Number(q.textContent) + Number(quantity)
+            q.textContent = qt
+            itemInput.value = ''
+        }
+    })
+    if (ret) return;
+
     var itemList = document.getElementById("itemList");
     var listItem = document.createElement("li");
     listItem.textContent = item;
 
     // Create a span element for quantity and set its text content
     var quantitySpan = document.createElement("span");
-    quantitySpan.textContent = "Quantity: " + quantity;
+    quantitySpan.innerHTML = 'Quantity: <span class="quantity-val">' + quantity + "</span>";
     quantitySpan.classList.add("quantity");
     listItem.appendChild(quantitySpan);
 
