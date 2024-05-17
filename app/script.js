@@ -113,6 +113,8 @@ async function getRecipeRecommendations() {
     } else {
       alert("HTTP-Error: " + responses.status)
     }
+  }).catch((error) => {
+    console.error(error)
   })
 }
 
