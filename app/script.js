@@ -105,6 +105,9 @@ async function getRecipeRecommendations() {
     method: "POST",
     body: {
         items: localStorage.getItem('item_list')
+    },
+    headers: {
+        'Access-Control-Request-Private-Network': 'true'
     }
   }).then(() => {
     if (responses.ok) {
