@@ -254,13 +254,14 @@ li {
 
 .pantry_chat{
     max-width: 500px;
-    max-height: 200px;
-    height: 768px;
+    max-height: 768px;
+    height: 200px;
     margin: 20px auto;
     padding: 20px;
     background-color: white; /* Light mode container background color */
     border-radius: 10px;
-    box-shadow: 5 5 5px rgb(0, 0, 0);
+    box-shadow: 5 5 1px rgb(0, 0, 0);
+    
 }
 
 .pantry_chat .container {
@@ -273,7 +274,6 @@ li {
     height: 50px;
     width: 375px;
     opacity: 0.9;
-    display: flex;
     display: none;
 }
 
