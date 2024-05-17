@@ -253,14 +253,19 @@ li {
 }
 
 .pantry_chat{
-    background-color: white;
-    border-radius: 10px;
+    max-width: 500px;
+    max-height: 768px;
+    height: 200px;
+    margin: 20px auto;
     padding: 20px;
-    margin-top: 20px;
-    box-shadow: 2px 2px 3px rgb(0, 0, 0);
-    padding-bottom: 10px;
-    height: 150px;
+    background-color: white; /* Light mode container background color */
+    border-radius: 10px;
+    box-shadow: 5 5 1px rgb(0, 0, 0);
+    
+}
 
+.pantry_chat .container {
+    background-color: #1c1c1e; /* Dark mode container background color */
 }
 
 .chatbot_chat{
@@ -269,6 +274,8 @@ li {
     height: 50px;
     width: 375px;
     opacity: 0.9;
-    display: flex;
+    display: none;
 }
+
+
 
