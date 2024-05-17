@@ -80,6 +80,7 @@ h2, h1 {
 
 #quantityInput {
     margin-bottom: 60px;
+    
 }
 
 .dark-mode .pantry {
@@ -97,6 +98,7 @@ input[type="number"] {
     border-radius: 5px;
     text-align: center;
     background-color: #f2f2f7; /* Light mode input background color */
+    
 }
 
 .dark-mode input[type="text"],
@@ -104,6 +106,7 @@ input[type="number"] {
     border-color: #38383a; /* Dark mode input border color */
     background-color: #2c2c2e; /* Dark mode input background color */
     color: #ffffff; /* Dark mode input text color */
+    
 }
 
 button {
@@ -166,6 +169,8 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family:"Ubuntu Sans Mono"; 
+
 }
 
 .dark-mode li {
@@ -245,13 +250,12 @@ li {
 
 
 .chat_add{
-    margin-top: 50px;
-    margin-left: 230px;
     text-align: center;
-    left: 50%;
-    transform: translate(-50%, -140%);
     height: auto;
-    width: 250px;
+    width: auto;
+    margin: auto;
+    display: block;
+
 }
 
 .pantry_chat{
@@ -271,10 +275,10 @@ li {
 }
 
 .chatbot_chat{
-    margin: auto;
+    margin-bottom: 10px;
     background-color: rgba(65, 65, 65, 0.1);
     height: auto;
-    width: 375px;
+    width: auto;
     display: none;
     color: #1c1c1e;
     text-align: center;
