@@ -1,5 +1,3 @@
-
-// Function to add an item to the pantry
 function addItem() {
   var itemInput = document.getElementById("itemInput");
   var quantityInput = document.getElementById("quantityInput"); // Get quantity input field
@@ -67,6 +65,21 @@ function getTotalQuantity() {
       total += quantity;
   });
   return total;
+}
+
+async function getRecipeRecommendations() {
+  //Generates recipes and instructions based on items in pantry
+  let responses = await fetch('http://localhost:3000/recommendations', {
+    body: {
+      items: ""
+    }
+  })
+  response = responses.json()[0].message.content
+  
+}
+
+async function generateRecipeInstructions() {
+  
 }
 
 // Function to navigate to the selected URL
