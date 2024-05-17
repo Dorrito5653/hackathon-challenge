@@ -95,20 +95,25 @@ function getTotalQuantity() {
 }
 
 async function getRecipeRecommendations() {
-  //Generates recipes and instructions based on items in pantry
-  var responses = await fetch('http://localhost:3000/recommendations', {
-    body: {
-      items: []
-    }
-  })
+    //Generates recipes and instructions based on items in pantry
+    try {
+        var responses = await fetch('http://localhost:3000/recommendations', {
+            body: {
+                items: []
+            }
+        })
 
-  if (responses.ok) {
-    var json = await responses.json();
-    var first_response = json[0].message.content
-    document.getElementById('chatbot_text').innerText = first_response
-  } else {
-    alert("HTTP-Error: " + responses.status)
-  }
+        if (responses.ok) {
+            var json = await responses.json();
+            var first_response = json[0].message.content
+            document.getElementById('chatbot_text').innerText = first_response
+        } else {
+            alert("HTTP-Error: " + responses.status)
+        }
+    } catch (e) {
+        console.error(e)
+        document.getElementById('chatbot_text').innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
 }
 
 // Function to navigate to the selected URL
