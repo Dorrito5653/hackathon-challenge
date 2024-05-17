@@ -14,11 +14,10 @@ function addItem() {
     food_elms.forEach(v => {
         /** @type {string} */
         let innert = v.innerText
-        console.log(innert.split('\n')[0])
         if (innert.split('\n')[0] === item) {
             ret = true;
             let q = v.querySelector('.quantity .quantity-val')
-            let qt = Number(q.textContent) + quantity
+            let qt = Number(q.textContent) + Number(quantity)
             q.textContent = qt
             itemInput.value = ''
         }
